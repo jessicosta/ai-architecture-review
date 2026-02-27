@@ -1,0 +1,13 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# AI generated outputs
+ai_review_output.md
+
+# OS / editor noise
+.DS_Store
