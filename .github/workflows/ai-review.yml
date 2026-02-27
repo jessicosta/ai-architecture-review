@@ -39,3 +39,10 @@ jobs:
         run: |
           gh pr comment ${{ github.event.pull_request.number }} \
             --body-file ai_review_output.md
+      
+      - name: Publish AI review summary
+        run: |
+          echo "## 🤖 AI-assisted Architecture Review" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Security: see PR comment" >> $GITHUB_STEP_SUMMARY
+          echo "- FinOps: see PR comment" >> $GITHUB_STEP_SUMMARY
