@@ -27,8 +27,8 @@ parser.add_argument(
 parser.add_argument(
     "--max-tokens",
     type=int,
-    default=2048,
-    help="Maximum output tokens (default: 2048)",
+    default=4096,
+    help="Maximum output tokens (default: 4096)",
 )
 
 args = parser.parse_args()
