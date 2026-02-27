@@ -41,3 +41,20 @@ Formatting and response constraints:
 - Keep the total response concise and readable (aim for clarity over exhaustiveness).
 - Do not leave any section unfinished.
 - If content would exceed reasonable length, summarize instead of truncating.
+
+At the very top of the response, include a short "Executive Summary" section with:
+- 1 sentence describing the change
+- A concise risk overview using this format:
+  Security: High / Medium / Low
+  Compliance: High / Medium / Low
+  Reliability: High / Medium / Low
+  FinOps: Uncertain / Low / Medium / High
+Keep this section under 5 lines.
+
+For each section:
+- Use at most 3 bullet points
+- Prefer impact-focused statements over exhaustive lists
+
+In the "Questions for Human Review" section:
+- Group questions by theme
+- Limit to a maximum of 3 questions per theme
