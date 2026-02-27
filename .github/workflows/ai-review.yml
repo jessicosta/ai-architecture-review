@@ -1,0 +1,31 @@
+name: AI-assisted Architecture Review
+
+on:
+  pull_request:
+    paths:
+      - "**/*.tf"
+
+jobs:
+  architecture-review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install google-genai
+
+      - name: Run AI architecture review
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          LLM_MODEL: gemini-2.5-flash
+          PYTHONPATH: scripts
+        run: |
+          python scripts/ai_review.py examples/terraform-plan.txt

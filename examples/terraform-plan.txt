@@ -1,0 +1,12 @@
+Terraform will perform the following actions:
+
+  + aws_s3_bucket.app_logs
+      bucket: "myapp-prod-logs-example"
+
+  + aws_s3_bucket_public_access_block.app_logs
+      block_public_acls:   false
+      block_public_policy: false
+      ignore_public_acls:  false
+      restrict_public_buckets: false
+
+Plan: 2 to add, 0 to change, 0 to destroy.
